@@ -2,6 +2,8 @@ package app.web.drjackycv.presentation.products.productlist
 
 import android.os.Bundle
 import android.view.View
+import androidx.compose.material.Text
+import androidx.compose.runtime.Composable
 import androidx.core.view.doOnPreDraw
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -13,11 +15,13 @@ import androidx.paging.CombinedLoadStates
 import androidx.paging.LoadState
 import androidx.paging.PagingData
 import androidx.recyclerview.widget.RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY
+import androidx.ui.tooling.preview.Preview
 import app.web.drjackycv.domain.base.Failure
 import app.web.drjackycv.domain.base.RecyclerItem
 import app.web.drjackycv.domain.products.entity.Beer
 import app.web.drjackycv.presentation.R
 import app.web.drjackycv.presentation.base.adapter.LoadingStateAdapter
+import app.web.drjackycv.presentation.base.compose.BaseTheme
 import app.web.drjackycv.presentation.databinding.FragmentProductListBinding
 import app.web.drjackycv.presentation.extension.*
 import app.web.drjackycv.presentation.products.choose.ChoosePathType
@@ -40,6 +44,15 @@ class ProductsListFragment : Fragment(R.layout.fragment_product_list) {
 
     private val productsListAdapter: ProductsListAdapter by lazy {
         ProductsListAdapter(::navigateToProductDetail)
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            BaseTheme {
+                Greeting("Android")
+            }
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -188,4 +201,17 @@ class ProductsListFragment : Fragment(R.layout.fragment_product_list) {
         productsListAdapter.retry()
     }
 
+}
+
+@Composable
+fun Greeting(name: String) {
+    Text(text = "Hello $name!")
+}
+
+@Preview(showBackground = true)
+@Composable
+fun DefaultPreview() {
+    BaseTheme {
+        Greeting("Android")
+    }
 }
