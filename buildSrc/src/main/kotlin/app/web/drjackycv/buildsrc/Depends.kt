@@ -6,7 +6,7 @@ object Depends {
 
     object Versions {
         const val appVersionCode = 1_000_000
-        const val gradleVersion = "7.0.0-alpha01"
+        const val gradleVersion = "7.0.0-alpha02"
         const val androidCompileSdkVersion = 29
         const val targetSdkVersion = 29
         const val minSdkVersion = 21
@@ -20,7 +20,7 @@ object Depends {
         const val okhttpLoggingVersion = "4.9.0"
         const val chuckerVersion = "3.4.0"
         const val gsonVersion = "2.9.0"
-        const val lifecycleVersion = "2.3.0"
+        const val lifecycleVersion = "2.3.0-beta01"
         const val constraintLayoutVersion = "2.1.0-alpha2"
         const val supportVersion = "1.3.0-beta01"
         const val materialVersion = "1.3.0"
@@ -92,8 +92,6 @@ object Depends {
             "androidx.fragment:fragment-ktx:${Versions.fragmentExtVersion}"
         const val android_core_ktx =
             "androidx.core:core-ktx:${Versions.coreKtxVersion}"
-        const val android_lifecycle_extensions =
-            "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycleVersion}"
         const val paging_runtime_ktx =
             "androidx.paging:paging-runtime-ktx:${Versions.pagingVersion}"
         const val paging_rx_ktx =
@@ -120,8 +118,6 @@ object Depends {
             "com.nhaarman.mockitokotlin2:mockito-kotlin:${Versions.mockitoKotlinVersion}"
         const val rx_kotlin = "io.reactivex.rxjava2:rxkotlin:${Versions.rxKotlinVersion}"
         const val rx_java = "io.reactivex.rxjava2:rxjava:${Versions.rxJavaVersion}"
-        const val lifecycle_livedata =
-            "androidx.lifecycle:lifecycle-livedata:${Versions.lifecycleVersion}"
         const val constraintlayout =
             "androidx.constraintlayout:constraintlayout:${Versions.constraintLayoutVersion}"
         const val navigation_fragment_ktx =
@@ -162,6 +158,9 @@ object Depends {
         const val compose_foundation_layout =
             "androidx.compose.foundation:foundation-layout:${Versions.composeVersion}"
         const val compose_material = "androidx.compose.material:material:${Versions.composeVersion}"
+        const val compose_runtime = "androidx.compose.runtime:runtime:${Versions.composeVersion}"
+        const val compose_runtime_dispatch =
+            "androidx.compose.runtime:runtime-dispatch:${Versions.composeVersion}"
         const val compose_runtime_saved_instance_state =
             "androidx.compose.runtime:runtime-saved-instance-state:${Versions.composeVersion}"
         const val compose_navigation =
